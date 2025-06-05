@@ -3,7 +3,7 @@
 
 Welcome to the DeepStream object detection task! In this guide, you'll use NVIDIA's DeepStream SDK on a Jetson Nano to perform object detection on a video using the **SSD MobileNet V1** model.
 
-# Let's get started
+#
 
 ## 📝 Pre-requisites
 
