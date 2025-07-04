@@ -1,30 +1,28 @@
 
-# 🎯 Object Detection Using DeepStream on Jetson Nano
+# Object Detection Using DeepStream on Jetson Nano
 
 Welcome to the DeepStream object detection task! In this guide, you'll use NVIDIA's DeepStream SDK on a Jetson Nano to perform object detection on a video using the **SSD MobileNet V1** model.
 
 #
 
-## 📝 Pre-requisites
+## Pre-requisites
 
 - **Jetson Nano** – L4T version 32.6.1 or 32.7.1  
-- **JetPack Version** – 4.6 🚀  
+- **JetPack Version** – 4.6 
 - **DeepStream SDK** – 6.0  
-- Familiarity with Docker (containers, images, running/committing, etc.) 🐳  
-- Basic understanding of object detection and how DeepStream works 🧠  
-- A little patience – trust the process! 👀
+- Familiarity with Docker (containers, images, running/committing, etc.)   
+- Basic understanding of object detection and how DeepStream works   
+- A little patience – trust the process! 
 
----
 
-## 🚀 Let's Get Started
+## Let's Get Started
 
-### 🔹 Step 1: Login to Jetson Nano
+### Step 1: Login to Jetson Nano
 
 Open your Jetson Nano’s desktop environment.
 
----
 
-### 🔹 Step 2: Check for the DeepStream Docker Image
+### Step 2: Check for the DeepStream Docker Image
 
 Run the following command to check if the DeepStream image is already available:
 
@@ -54,7 +52,7 @@ nvcr.io/nvidia/deepstream-l4t:6.0-triton
 
 ---
 
-### 🔹 Step 3: Navigate to the Model Directory
+### Step 3: Navigate to the Model Directory
 
 Inside the container, navigate to:
 
@@ -64,7 +62,7 @@ cd /opt/nvidia/deepstream/deepstream/samples/trtis-model-repo
 
 We’ll use the **SSD MobileNet V1 (COCO)** model.
 
-🔗 Download the model from [TensorFlow 1 Detection Model Zoo](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf1_detection_zoo.md)
+Download the model from [TensorFlow 1 Detection Model Zoo](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf1_detection_zoo.md)
 
 Use `wget` to download the model `.tar.gz` and extract it:
 
@@ -77,7 +75,7 @@ Then move the `frozen_inference_graph.pb` to a new subfolder named `ssd_mobilene
 
 ---
 
-### 🔹 Step 4: Configure the Model
+### Step 4: Configure the Model
 
 Edit `config.pbtxt` in the model folder:
 
@@ -86,7 +84,7 @@ Edit `config.pbtxt` in the model folder:
 
 ---
 
-### 🔹 Step 5: Create App Config Files
+### Step 5: Create App Config Files
 
 Navigate to the `configs` directory:
 
@@ -123,7 +121,7 @@ type=4     # For RTSP output stream
 
 ---
 
-### 🔹 Step 6: Run DeepStream 🎥
+### Step 6: Run DeepStream 🎥
 
 Now run the application:
 
@@ -135,7 +133,7 @@ Give it a moment... ⏳
 
 ---
 
-## 🌐 View the Output
+## View the Output
 
 To watch your RTSP stream, open a video player (like **VLC**) or browser that supports RTSP and enter the link:
 
@@ -153,7 +151,7 @@ You’ll see your video being processed live — objects will appear with **boun
 
 ---
 
-## ✅ That’s It!
+## That’s It!
 
 You've successfully run real-time object detection using DeepStream on a Jetson Nano! 🎉
 
